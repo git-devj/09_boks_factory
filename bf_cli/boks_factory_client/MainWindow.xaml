@@ -1,0 +1,43 @@
+﻿<Window x:Class="nicetry.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:nicetry"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="900">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btn" Content="검사시작" HorizontalAlignment="Left" Margin="690,14,0,0" VerticalAlignment="Top" Width="175" Height="33" RenderTransformOrigin="-0.155,0.755" Click="connect" Grid.ColumnSpan="2"/>
+        <Button x:Name="btn1" Content="일시정지" HorizontalAlignment="Left" Margin="690,0,0,376" VerticalAlignment="Bottom" Width="175" Height="32" RenderTransformOrigin="-0.155,0.755" Click="Btn1_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="resultbtn" Content="전체결과" HorizontalAlignment="Left" Margin="690,0,0,256" VerticalAlignment="Bottom" Width="175" Height="32" RenderTransformOrigin="-0.155,0.755"  Grid.ColumnSpan="2" Click="Resultbtn_Click"/>
+        <Image x:Name="Cam_1" HorizontalAlignment="Left" Height="398" Margin="10,61,0,0" VerticalAlignment="Top" Width="492" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="color" HorizontalAlignment="Left" Margin="102,14,0,0" VerticalAlignment="Top" Width="120" Height="33" RenderTransformOrigin="0.687,0.589" Grid.ColumnSpan="2">
+            <ComboBoxItem Content="RED" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="GREEN" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="BLUE" HorizontalAlignment="Left" Width="118"/>
+        </ComboBox>
+        <ComboBox x:Name="shape" HorizontalAlignment="Left" Margin="327,14,0,0" VerticalAlignment="Top" Width="120" Height="33" Grid.ColumnSpan="2">
+            <ComboBoxItem Content="Triangle" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Square" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Pentagon" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Hexagon" HorizontalAlignment="Left" Width="118"/>
+        </ComboBox>
+        <Label x:Name="colorLabel" HorizontalAlignment="Left" Margin="35,17,0,0" VerticalAlignment="Top" Width="50" Height="33" Content="색 선택" Grid.ColumnSpan="2"/>
+        <Label x:Name="shapeLabel" HorizontalAlignment="Left" Margin="243,17,0,0" VerticalAlignment="Top" Width="65" Height="33" Content="도형 선택" Grid.ColumnSpan="2"/>
+        <ListView x:Name="Allresult" HorizontalAlignment="Left" Height="399" Margin="270,31,0,0" VerticalAlignment="Top" Width="595" Grid.ColumnSpan="2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" Width="100"/>
+                    <GridViewColumn Header="Total" DisplayMemberBinding="{Binding Total}" Width="160"/>
+                    <GridViewColumn Header="Defective" DisplayMemberBinding="{Binding Defective}" Width="160"/>
+                    <GridViewColumn Header="Normal" DisplayMemberBinding="{Binding Normal}" Width="160"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="sethide" Content="닫기" HorizontalAlignment="Left" Margin="708,0,0,39" VerticalAlignment="Bottom" Width="157" Height="24" RenderTransformOrigin="-0.155,0.755"  Grid.ColumnSpan="2" Click="Sethide_Click"/>
+    </Grid>
+</Window>

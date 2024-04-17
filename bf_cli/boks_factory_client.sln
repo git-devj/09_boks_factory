@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.34526.175
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "boks_factory_client", "boks_factory_client\boks_factory_client.csproj", "{4D40A729-F9D9-479A-9680-07FD33AD1F01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D40A729-F9D9-479A-9680-07FD33AD1F01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D40A729-F9D9-479A-9680-07FD33AD1F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D40A729-F9D9-479A-9680-07FD33AD1F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D40A729-F9D9-479A-9680-07FD33AD1F01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B39651E9-CF2E-4B4F-B1A8-6D46814894B5}
+	EndGlobalSection
+EndGlobal

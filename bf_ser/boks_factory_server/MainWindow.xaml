@@ -1,0 +1,43 @@
+﻿<Window x:Class="WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="520.668" Width="877.311">
+    <Grid>
+        <Image Name="Cam_1" Margin="20,46,464,10" RenderTransformOrigin="1.303,0.503"/>
+        <ListView x:Name="ClientView" HorizontalAlignment="Left" Height="434" Margin="419,46,0,0" VerticalAlignment="Top" Width="440" Background="{x:Null}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ClientIP" DisplayMemberBinding="{Binding client}" Width="50"/>
+                    <GridViewColumn Header="색" DisplayMemberBinding="{Binding Color}" Width="70"/>
+                    <GridViewColumn Header="도형" DisplayMemberBinding="{Binding Shape}" Width="70"/>
+                    <GridViewColumn Header="정상품" Width="65">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=Normal}" Foreground="Blue"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="불량품" Width="65">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=Defective}" Foreground="Red"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="총 생산량" DisplayMemberBinding="{Binding Total}" Width="65"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label x:Name="colorTitle" Content="색상" HorizontalAlignment="Left" Margin="20,15,0,0" VerticalAlignment="Top" Width="36" FontWeight="Bold"/>
+        <Label x:Name="shapeTitle" Content="도형" HorizontalAlignment="Left" Margin="143,15,0,0" VerticalAlignment="Top" Width="36" FontWeight="Bold"/>
+        <Label x:Name="choiceColor" Content="선택 색상" HorizontalAlignment="Left" Margin="65,15,0,0" VerticalAlignment="Top" Width="65"/>
+        <Label x:Name="choiceShape" Content="선택 도형" HorizontalAlignment="Left" Margin="187,15,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label x:Name="totalCount" Content="0" HorizontalAlignment="Left" Margin="794,15,0,0" VerticalAlignment="Top" Width="65"/>
+        <Label x:Name="shapeTitle_Copy" Content="총 개수" HorizontalAlignment="Left" Margin="725,15,0,0" VerticalAlignment="Top" Width="64" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
